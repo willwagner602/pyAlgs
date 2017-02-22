@@ -64,6 +64,16 @@ class SortAlgorithms:
                 i -= 1
             array[i + 1] = key
         return array
+    
+    def insertion_sort(array):
+        for j in range(1, len(array)):
+            key = array[j]
+            index = j - 1
+            while index >= 0 and array[index] > key:
+                array[index + 1] = array[index]
+                index -= 1
+            array[index + 1] = key
+        return array
 
     def merge_manager(self, array, start, end):
         if (end - start) > 0:
